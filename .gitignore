@@ -1,0 +1,10 @@
+# 只留在本机，不上传
+AI行业情报库PRD.md
+*PRD*.md
+.claude/
+**/backup/
+__pycache__/
+*.pyc
+
+# 个人笔记
+ai情报库相关.md
