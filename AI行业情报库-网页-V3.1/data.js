@@ -33,7 +33,7 @@
  *   - terms[].category：词条分类，目前有「架构模式」「开发框架」「开发框架」
  */
 window.DATA = {
-  "updated": "2026-11-07",
+  "updated": "2026-11-08",
   "companies": [
     {
       "id": "anthropic",
@@ -6819,6 +6819,97 @@ window.DATA = {
         "checked": "2026-11-07",
         "label": "1.0 公告"
       }
+    },
+    {
+      "company": "anthropic",
+      "date": "2026-11-06",
+      "type": "技术概念",
+      "title": "发布智能体记忆研究，用 dreaming 整理记忆",
+      "directions": [
+        "context",
+        "agent"
+      ],
+      "term": "dreaming",
+      "src": {
+        "url": "https://www.anthropic.com/research/components-of-agent-memory",
+        "checked": "2026-11-08",
+        "label": "Anthropic"
+      }
+    },
+    {
+      "company": "openai",
+      "date": "2026-11-06",
+      "type": "融资",
+      "title": "据报道首笔 110 亿美元融资到账，估值 1.25 万亿美元",
+      "src": {
+        "url": "https://news.qq.com/rain/a/20261107A036VH00",
+        "checked": "2026-11-08",
+        "label": "腾讯新闻（援引彭博）"
+      }
+    },
+    {
+      "company": "anthropic",
+      "subject": "Claude Max",
+      "date": "2026-11-06",
+      "type": "定价与商业模式",
+      "title": "法官裁定 Max 用量宣传诉讼部分主张可继续",
+      "directions": [
+        "cost"
+      ],
+      "src": {
+        "url": "https://thenextweb.com/news/anthropic-claude-max-lawsuit-ruling-usage-claims",
+        "checked": "2026-11-08",
+        "label": "The Next Web"
+      }
+    },
+    {
+      "company": "deepseek",
+      "date": "2026-11-07",
+      "type": "安全事故",
+      "title": "网页和 API 部分中断，一周内第二次",
+      "src": {
+        "url": "https://status.deepseek.com/incidents/7219383236287",
+        "checked": "2026-11-08",
+        "label": "DeepSeek 状态页"
+      }
+    },
+    {
+      "company": "qwen",
+      "subject": "Apple",
+      "date": "2026-11-04",
+      "type": "合作",
+      "title": "国行 Apple 智能接入千问，开放开发者测试",
+      "src": {
+        "url": "https://finance.sina.com.cn/jjxw/2026-11-07/doc-inixwnyk5120664.shtml",
+        "checked": "2026-11-08",
+        "label": "新浪财经"
+      }
+    },
+    {
+      "company": "anthropic",
+      "date": "2026-11-03",
+      "type": "产品",
+      "title": "Mythos 5 等模型生成的文本加入水印",
+      "directions": [
+        "safety"
+      ],
+      "src": {
+        "url": "https://platform.claude.com/docs/en/release-notes/overview",
+        "checked": "2026-11-08",
+        "label": "Claude 平台更新记录"
+      }
+    },
+    {
+      "company": "xai",
+      "subject": "Grok Imagine",
+      "date": "2026-11-02",
+      "type": "下架停服",
+      "title": "Imagine 停用两款旧图像模型，改由 2.0 低档承接",
+      "src": {
+        "url": "https://docs.x.ai/docs/release-notes",
+        "checked": "2026-11-08",
+        "label": "xAI 更新记录"
+      }
     }
   ],
   "version": "V3.1",
@@ -7846,6 +7937,120 @@ window.DATA = {
             "url": "https://docs.langchain.com/oss/python/langgraph/overview",
             "checked": "2026-11-07",
             "label": "LangGraph 文档"
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-11-08",
+      "by": "每日自动更新",
+      "items": [
+        {
+          "company": "anthropic",
+          "type": "新动态",
+          "text": "11 月 6 日：发布智能体记忆研究，介绍用 dreaming 整理记忆",
+          "src": {
+            "url": "https://www.anthropic.com/research/components-of-agent-memory",
+            "checked": "2026-11-08",
+            "label": "Anthropic"
+          }
+        },
+        {
+          "company": "openai",
+          "type": "新动态",
+          "text": "11 月 6 日：据彭博报道，新一轮首笔 110 亿美元融资到账，估值 1.25 万亿美元；整轮最高 200 亿美元，融资信息字段待官方确认后再改",
+          "src": {
+            "url": "https://news.qq.com/rain/a/20261107A036VH00",
+            "checked": "2026-11-08",
+            "label": "腾讯新闻（援引彭博）"
+          }
+        },
+        {
+          "company": "qwen",
+          "type": "新动态",
+          "text": "11 月 4 日：千问支持的国行 Apple 智能开放开发者测试（补录）",
+          "src": {
+            "url": "https://finance.sina.com.cn/jjxw/2026-11-07/doc-inixwnyk5120664.shtml",
+            "checked": "2026-11-08",
+            "label": "新浪财经"
+          }
+        },
+        {
+          "company": "anthropic",
+          "type": "新动态",
+          "text": "11 月 3 日：Mythos 5、Opus 4.7、Sonnet 4.6 生成的文本加入 Anthropic 文本水印（补录）",
+          "src": {
+            "url": "https://platform.claude.com/docs/en/release-notes/overview",
+            "checked": "2026-11-08",
+            "label": "Claude 平台更新记录"
+          }
+        },
+        {
+          "company": "anthropic",
+          "type": "行业事件",
+          "text": "11 月 6 日：美国法官裁定 Claude Max「5 倍、20 倍用量」宣传相关的部分诉讼主张可继续审理",
+          "src": {
+            "url": "https://thenextweb.com/news/anthropic-claude-max-lawsuit-ruling-usage-claims",
+            "checked": "2026-11-08",
+            "label": "The Next Web"
+          }
+        },
+        {
+          "company": "deepseek",
+          "type": "行业事件",
+          "text": "11 月 7 日：网页和 API 部分中断，已恢复；11 月 3 日也发生过一次",
+          "src": {
+            "url": "https://status.deepseek.com/incidents/7219383236287",
+            "checked": "2026-11-08",
+            "label": "DeepSeek 状态页"
+          }
+        },
+        {
+          "company": "xai",
+          "type": "行业事件",
+          "text": "11 月 2 日：停用 grok-imagine-image-quality 和 image-pro，请求改由 image-2.0 低质量档处理，价格更低（补录）",
+          "src": {
+            "url": "https://docs.x.ai/docs/release-notes",
+            "checked": "2026-11-08",
+            "label": "xAI 更新记录"
+          }
+        },
+        {
+          "type": "新词",
+          "text": "新增「Dreaming（智能体做梦）」，状态为新出现；Anthropic 提供 Dreams 功能（研究预览）",
+          "src": {
+            "url": "https://www.anthropic.com/research/components-of-agent-memory",
+            "checked": "2026-11-08",
+            "label": "Anthropic"
+          }
+        },
+        {
+          "company": "meta",
+          "type": "产品变化",
+          "text": "周日补查个人智能体赛道：Muse 价格入口填为「大部分功能免费，另有订阅档位」",
+          "src": {
+            "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+            "checked": "2026-11-08",
+            "label": "Meta"
+          }
+        },
+        {
+          "company": "anthropic",
+          "type": "产品变化",
+          "text": "周日补查个人智能体赛道：Claude Duet 填上运行位置、记忆",
+          "src": {
+            "url": "https://claude.com/blog/claude-duet",
+            "checked": "2026-11-08",
+            "label": "Anthropic"
+          }
+        },
+        {
+          "type": "产品变化",
+          "text": "周日补查个人智能体赛道：OpenClaw 填上能操作什么、记忆、主动与定时、操作确认、接入渠道（官方文档）",
+          "src": {
+            "url": "https://github.com/openclaw/openclaw",
+            "checked": "2026-11-08",
+            "label": "OpenClaw GitHub"
           }
         }
       ]
@@ -10349,6 +10554,82 @@ window.DATA = {
           "label": "1.0 公告"
         }
       ]
+    },
+    {
+      "id": "dreaming",
+      "name": "Dreaming（智能体做梦）",
+      "aliases": [
+        "Dreaming",
+        "Dreams",
+        "Sleep-time Compute",
+        "睡眠时计算"
+      ],
+      "oneLine": "智能体在空闲时回看过往记录，修正、合并和整理自己的记忆",
+      "status": "新出现",
+      "statusReason": "2026 年 11 月 6 日 Anthropic 发布研究并在 Managed Agents 提供 Dreams 功能（研究预览）；目前只查到 Anthropic 一家收录公司官方支持",
+      "statusSrc": [
+        {
+          "url": "https://www.anthropic.com/research/components-of-agent-memory",
+          "checked": "2026-11-08",
+          "label": "Anthropic"
+        },
+        {
+          "url": "https://platform.claude.com/docs/en/managed-agents/dreams",
+          "checked": "2026-11-08",
+          "label": "Claude 平台文档"
+        }
+      ],
+      "firstSeen": "2025-04",
+      "proposer": "思路来自 Letta 与 UC Berkeley 2025 年提出的 sleep-time compute；Anthropic 称这一过程常被叫作 dreaming",
+      "directions": [
+        "context",
+        "agent"
+      ],
+      "analogy": "像人睡觉时大脑回放白天的经历，把零散的事整理成长期记得住的知识。",
+      "problem": "智能体边做事边记笔记，时间长了笔记会重复、互相矛盾或过时。Dreaming 让它在任务之外对照原始记录重新整理：改正错误、合并重复、建立索引，并决定下次一开始就加载哪些内容。",
+      "relations": [
+        {
+          "term": "memory",
+          "text": "Dreaming 是维护长期记忆的一种方式"
+        },
+        {
+          "term": "context-engineering",
+          "text": "决定哪些记忆在新会话开始时放进上下文"
+        },
+        {
+          "term": "harness",
+          "text": "由运行框架安排何时整理、读取哪些记录"
+        }
+      ],
+      "adopters": [
+        {
+          "company": "anthropic",
+          "note": "Managed Agents 的 Dreams 功能（研究预览，需申请）；研究中用于 Claude 的记忆整理",
+          "src": {
+            "url": "https://platform.claude.com/docs/en/managed-agents/dreams",
+            "checked": "2026-11-08",
+            "label": "Claude 平台文档"
+          }
+        }
+      ],
+      "pmNote": "整理记忆要额外花算力，官方也提到需要权衡多久整理一次、整理哪些内容。Anthropic 的 Dreams 会生成新的记忆库、不改原库，便于人工检查后再采用。设计带记忆的产品时，要考虑记忆出错后怎么发现和纠正。",
+      "src": [
+        {
+          "url": "https://www.anthropic.com/research/components-of-agent-memory",
+          "checked": "2026-11-08",
+          "label": "Anthropic"
+        },
+        {
+          "url": "https://platform.claude.com/docs/en/managed-agents/dreams",
+          "checked": "2026-11-08",
+          "label": "Claude 平台文档"
+        },
+        {
+          "url": "https://arxiv.org/abs/2504.13171",
+          "checked": "2026-11-08",
+          "label": "arXiv 论文"
+        }
+      ]
     }
   ],
   "termLine": [
@@ -10549,7 +10830,7 @@ window.DATA = {
           "主动与定时": "主动提建议；关闭应用后继续工作",
           "操作确认": "发邮件、购买前确认；独立的 Sentinel 智能体审查联网；完整操作记录",
           "接入渠道": "Muse 应用、WhatsApp",
-          "价格入口": null
+          "价格入口": "大部分功能免费，另有订阅档位"
         }
       }
     },
@@ -10675,9 +10956,9 @@ window.DATA = {
       ],
       "matrix": {
         "personal-agent": {
-          "运行位置": null,
+          "运行位置": "云端虚拟机，自带浏览器，不需要你的电脑或手机开着",
           "能操作什么": "已连接的应用；接受各类任务",
-          "记忆": null,
+          "记忆": "沿用 Claude 账户里的记忆、技能和已连接应用",
           "主动与定时": "每天早上发简报，持续关注，只在需要时发消息",
           "操作确认": "代你操作前先确认；接触不到你的密码和登录令牌",
           "接入渠道": "iOS、安卓、claude.ai",
@@ -10754,16 +11035,26 @@ window.DATA = {
           "checked": "2026-11-06",
           "label": "维基百科",
           "official": false
+        },
+        {
+          "url": "https://github.com/openclaw/openclaw",
+          "checked": "2026-11-08",
+          "label": "OpenClaw GitHub"
+        },
+        {
+          "url": "https://docs.openclaw.ai/automation/cron-jobs",
+          "checked": "2026-11-08",
+          "label": "OpenClaw 文档"
         }
       ],
       "matrix": {
         "personal-agent": {
           "运行位置": "本地",
-          "能操作什么": null,
-          "记忆": null,
-          "主动与定时": null,
-          "操作确认": null,
-          "接入渠道": null,
+          "能操作什么": "执行命令、浏览器、文件；可装技能和插件",
+          "记忆": "有，状态和记忆存在你自己的设备上",
+          "主动与定时": "内置定时任务，到点唤醒智能体并把结果发到聊天渠道",
+          "操作确认": "执行命令可设审批；陌生人私信默认要先配对批准；默认不在沙箱里运行",
+          "接入渠道": "WhatsApp、Telegram、Slack、Discord、iMessage 等 20 多个渠道，另有桌面和手机应用",
           "价格入口": "开源，模型费用另算"
         }
       }
