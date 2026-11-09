@@ -33,7 +33,7 @@
  *   - terms[].category：词条分类，目前有「架构模式」「开发框架」「开发框架」
  */
 window.DATA = {
-  "updated": "2026-11-08",
+  "updated": "2026-11-09",
   "companies": [
     {
       "id": "anthropic",
@@ -274,11 +274,11 @@ window.DATA = {
           "id": "claude-opus-4-6",
           "name": "Claude Opus 4.6",
           "date": "2026-02-05",
-          "summary": null,
+          "summary": "编程更强，首个支持 100 万上下文（测试版）的 Opus",
           "src": {
-            "url": "https://en.wikipedia.org/wiki/Claude_(AI)",
-            "checked": "2026-10-20",
-            "official": false
+            "url": "https://www.anthropic.com/news/claude-opus-4-6",
+            "checked": "2026-11-09",
+            "label": "Anthropic"
           }
         },
         {
@@ -287,11 +287,11 @@ window.DATA = {
           "id": "claude-opus-4-5",
           "name": "Claude Opus 4.5",
           "date": "2025-11-24",
-          "summary": null,
+          "summary": "官方称编程、智能体和电脑操作能力领先",
           "src": {
-            "url": "https://en.wikipedia.org/wiki/Claude_(AI)",
-            "checked": "2026-10-20",
-            "official": false
+            "url": "https://www.anthropic.com/news/claude-opus-4-5",
+            "checked": "2026-11-09",
+            "label": "Anthropic"
           }
         },
         {
@@ -300,11 +300,11 @@ window.DATA = {
           "id": "claude-sonnet-4-5",
           "name": "Claude Sonnet 4.5",
           "date": "2025-09-29",
-          "summary": null,
+          "summary": "官方称最强编程模型，擅长构建智能体和操作电脑",
           "src": {
-            "url": "https://en.wikipedia.org/wiki/Claude_(AI)",
-            "checked": "2026-10-20",
-            "official": false
+            "url": "https://www.anthropic.com/news/claude-sonnet-4-5",
+            "checked": "2026-11-09",
+            "label": "Anthropic"
           }
         },
         {
@@ -326,11 +326,11 @@ window.DATA = {
           "id": "claude-3-7-sonnet",
           "name": "Claude 3.7 Sonnet",
           "date": "2025-02-24",
-          "summary": null,
+          "summary": "首个混合推理模型，同时推出 Claude Code 预览",
           "src": {
-            "url": "https://en.wikipedia.org/wiki/Claude_(AI)",
-            "checked": "2026-10-20",
-            "official": false
+            "url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+            "checked": "2026-11-09",
+            "label": "Anthropic"
           }
         },
         {
@@ -339,11 +339,11 @@ window.DATA = {
           "id": "claude-3-5-sonnet",
           "name": "Claude 3.5 Sonnet",
           "date": "2024-06-20",
-          "summary": null,
+          "summary": "3.5 系列首款，中档价格，超过 Claude 3 Opus",
           "src": {
-            "url": "https://en.wikipedia.org/wiki/Claude_(AI)",
-            "checked": "2026-10-20",
-            "official": false
+            "url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+            "checked": "2026-11-09",
+            "label": "Anthropic"
           }
         },
         {
@@ -365,11 +365,11 @@ window.DATA = {
           "id": "claude-2",
           "name": "Claude 2",
           "date": "2023-07-11",
-          "summary": null,
+          "summary": "回答更长，开放 API 和公开测试版网站",
           "src": {
-            "url": "https://en.wikipedia.org/wiki/Claude_(AI)",
-            "checked": "2026-10-20",
-            "official": false
+            "url": "https://www.anthropic.com/news/claude-2",
+            "checked": "2026-11-09",
+            "label": "Anthropic"
           }
         },
         {
@@ -402,9 +402,15 @@ window.DATA = {
           },
           {
             "name": "Max",
-            "monthly": "100 美元起",
+            "monthly": "100 美元",
             "annual": null,
-            "perks": "用量为 Pro 的 5 倍或 20 倍；每月 100–200 美元 API 额度"
+            "perks": "用量为 Pro 的 5 倍；Fable 最多用到每周限额一半；每月 100 美元 API 额度"
+          },
+          {
+            "name": "Ultra",
+            "monthly": "200 美元",
+            "annual": null,
+            "perks": "无 5 小时限额（已验证账户）；每周用量为 Pro 的 10 倍；每月 200 美元 API 额度"
           },
           {
             "name": "Team 标准席位",
@@ -427,14 +433,15 @@ window.DATA = {
         ],
         "plansSrc": {
           "url": "https://claude.com/pricing",
-          "checked": "2026-10-20"
+          "checked": "2026-11-09",
+          "label": "Claude 套餐页"
         },
         "api": [
           {
             "model": "Claude Fable 5.1",
             "input": "10 美元",
             "output": "50 美元",
-            "cache": null
+            "cache": "读取 0.25 美元"
           },
           {
             "model": "Claude Opus 5.5",
@@ -446,13 +453,13 @@ window.DATA = {
             "model": "Claude Sonnet 5.5",
             "input": "2 美元",
             "output": "10 美元",
-            "cache": null
+            "cache": "读取 0.10 美元"
           },
           {
             "model": "Claude Haiku 5.5",
             "input": "0.10 美元起",
             "output": "0.50 美元起",
-            "cache": null
+            "cache": "读取 0.01 美元起"
           }
         ],
         "apiUnit": "单位：每百万 token",
@@ -466,6 +473,11 @@ window.DATA = {
             "url": "https://www.anthropic.com/claude-opus-5-5",
             "checked": "2026-10-20",
             "label": "发布页"
+          },
+          {
+            "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+            "checked": "2026-11-09",
+            "label": "Claude 价格文档"
           }
         ]
       },
@@ -487,7 +499,13 @@ window.DATA = {
           }
         },
         "image": {
-          "v": "未查到"
+          "v": "无",
+          "note": "当前模型只输出文本，不生成图片",
+          "src": {
+            "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+            "checked": "2026-11-09",
+            "label": "Claude 模型文档"
+          }
         },
         "video": {
           "v": "未查到"
@@ -1845,7 +1863,13 @@ window.DATA = {
           }
         },
         "video": {
-          "v": "未查到"
+          "v": "无",
+          "note": "Sora 网页和 App 已于 2026-04-26 停用，API 于 2026-09-24 停用",
+          "src": {
+            "url": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation",
+            "checked": "2026-11-09",
+            "label": "OpenAI 帮助中心"
+          }
         },
         "voice": {
           "v": "有",
@@ -1889,7 +1913,13 @@ window.DATA = {
           }
         },
         "openWeights": {
-          "v": "未查到"
+          "v": "有",
+          "note": "gpt-oss-120b / 20b，Apache 2.0 许可",
+          "src": {
+            "url": "https://huggingface.co/openai/gpt-oss-120b",
+            "checked": "2026-11-09",
+            "label": "OpenAI Hugging Face 主页"
+          }
         },
         "api": {
           "v": "有",
@@ -6910,6 +6940,32 @@ window.DATA = {
         "checked": "2026-11-08",
         "label": "xAI 更新记录"
       }
+    },
+    {
+      "company": "zhipu",
+      "subject": "中国移动云",
+      "date": "2026-11-06",
+      "type": "合作",
+      "title": "与中国移动云签约，GLM 接入移动云 MaaS",
+      "src": {
+        "url": "https://finance.sina.com.cn/tech/digi/2026-11-08/doc-inixzpas7009595.shtml",
+        "checked": "2026-11-09",
+        "official": false,
+        "label": "新浪科技（IT之家）"
+      }
+    },
+    {
+      "company": "anthropic",
+      "subject": "OnePWR Solutions",
+      "date": "2026-11-08",
+      "type": "合作",
+      "title": "据报道约 34 亿美元锁定 1.7GW 燃气发电机",
+      "src": {
+        "url": "https://www.thehindubusinessline.com/info-tech/anthropic-strikes-34-billion-deal-for-data-centre-generators/article71680927.ece",
+        "checked": "2026-11-09",
+        "official": false,
+        "label": "BusinessLine（路透转述 FT）"
+      }
     }
   ],
   "version": "V3.1",
@@ -8051,6 +8107,84 @@ window.DATA = {
             "url": "https://github.com/openclaw/openclaw",
             "checked": "2026-11-08",
             "label": "OpenClaw GitHub"
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-11-09",
+      "by": "每日自动更新",
+      "items": [
+        {
+          "company": "zhipu",
+          "type": "新动态",
+          "text": "11 月 6 日：与中国移动云公司签署合作协议，GLM 系列接入移动云 MaaS 平台，共建 AI Coding 产品",
+          "src": {
+            "url": "https://finance.sina.com.cn/tech/digi/2026-11-08/doc-inixzpas7009595.shtml",
+            "checked": "2026-11-09",
+            "official": false,
+            "label": "新浪科技（IT之家）"
+          }
+        },
+        {
+          "company": "anthropic",
+          "type": "新动态",
+          "text": "11 月 8 日：据 FT 报道，约 34 亿美元从 OnePWR 买下 1.7GW 燃气发电机订单（9 月下旬成交），Anthropic 未回应",
+          "src": {
+            "url": "https://www.thehindubusinessline.com/info-tech/anthropic-strikes-34-billion-deal-for-data-centre-generators/article71680927.ece",
+            "checked": "2026-11-09",
+            "official": false,
+            "label": "BusinessLine（路透转述 FT）"
+          }
+        },
+        {
+          "company": "anthropic",
+          "type": "价格变化",
+          "text": "套餐页现为 Max 100 美元（5 倍用量）和新档 Ultra 200 美元（10 倍周用量、无 5 小时限额）；原记录为 Max 100–200 美元",
+          "src": {
+            "url": "https://claude.com/pricing",
+            "checked": "2026-11-09",
+            "label": "Claude 套餐页"
+          }
+        },
+        {
+          "company": "anthropic",
+          "type": "价格变化",
+          "text": "周一补查：填上 Fable 5.1、Sonnet 5.5、Haiku 5.5 的缓存读取价格",
+          "src": {
+            "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+            "checked": "2026-11-09",
+            "label": "Claude 价格文档"
+          }
+        },
+        {
+          "company": "anthropic",
+          "type": "功能变化",
+          "text": "周一补查：图像生成填为「无」（当前模型只输出文本）",
+          "src": {
+            "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+            "checked": "2026-11-09",
+            "label": "Claude 模型文档"
+          }
+        },
+        {
+          "company": "anthropic",
+          "type": "其他",
+          "text": "周一补查：补上 Opus 4.6、Opus 4.5、Sonnet 4.5、3.7 Sonnet、3.5 Sonnet、Claude 2 的简介，来源换成官方发布页",
+          "src": {
+            "url": "https://www.anthropic.com/news",
+            "checked": "2026-11-09",
+            "label": "Anthropic"
+          }
+        },
+        {
+          "company": "openai",
+          "type": "功能变化",
+          "text": "周一补查：视频生成填为「无」（Sora 已停用），开放权重填为「有」（gpt-oss）",
+          "src": {
+            "url": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation",
+            "checked": "2026-11-09",
+            "label": "OpenAI 帮助中心"
           }
         }
       ]
