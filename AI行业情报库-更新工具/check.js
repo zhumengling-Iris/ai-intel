@@ -48,7 +48,9 @@ for (const n of D.news || []) {
   if (n.term && !(D.terms || []).some((x) => x.id === n.term)) errs.push(`动态关联的词条不存在：${n.term}`);
   if (!TYPES.includes(n.type)) errs.push(`动态类型不对：${n.type}（${n.title}）`);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(n.date)) errs.push(`动态日期要精确到日：${n.title}`);
-  if (!n.src || !n.src.url) errs.push(`动态缺少来源：${n.title}`);
+  // 来源可以是一个，也可以是多个（说法不一时附两个来源）
+  const srcs = Array.isArray(n.src) ? n.src : (n.src ? [n.src] : []);
+  if (!srcs.length || srcs.some((s) => !s || !s.url)) errs.push(`动态缺少来源：${n.title}`);
   if ((n.title || '').length > 30) errs.push(`动态标题超过 30 字：${n.title}`);
 }
 

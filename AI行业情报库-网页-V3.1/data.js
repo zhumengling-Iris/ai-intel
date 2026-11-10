@@ -7126,7 +7126,6 @@ window.DATA = {
       "src": {
         "url": "https://finance.sina.com.cn/tech/digi/2026-11-08/doc-inixzpas7009595.shtml",
         "checked": "2026-11-09",
-        "official": false,
         "label": "新浪科技（IT之家）"
       }
     },
@@ -7139,7 +7138,6 @@ window.DATA = {
       "src": {
         "url": "https://www.thehindubusinessline.com/info-tech/anthropic-strikes-34-billion-deal-for-data-centre-generators/article71680927.ece",
         "checked": "2026-11-09",
-        "official": false,
         "label": "BusinessLine（路透转述 FT）"
       }
     },
@@ -7192,10 +7190,9 @@ window.DATA = {
       "type": "产品",
       "title": "千问办公 2.0 发布，支持多人与 Agent 协作",
       "src": {
-        "url": "https://finance.sina.com.cn/tech/digi/2026-11-09/doc-iniycrzy3255750.shtml",
+        "url": "https://docs.qwenwork.cn/release-notes/desktop",
         "checked": "2026-11-10",
-        "label": "新浪科技（IT之家）",
-        "official": false
+        "label": "千问办公官方更新日志"
       },
       "directions": [
         "agent"
@@ -7204,15 +7201,23 @@ window.DATA = {
     {
       "company": "deepseek",
       "subject": "DeepSeek Harness",
-      "date": "2026-11-08",
+      "date": "2026-11-05",
       "type": "产品",
-      "title": "Harness 筹备插件市场和开发者扶持",
-      "src": {
-        "url": "https://www.sohu.com/a/1099205338_122980439",
-        "checked": "2026-11-10",
-        "label": "搜狐",
-        "official": false
-      },
+      "title": "Harness 日活 154 万，筹备官方插件市场",
+      "src": [
+        {
+          "url": "https://news.qq.com/rain/a/20261106A03H4L00",
+          "checked": "2026-11-10",
+          "label": "腾讯新闻（11 月 6 日报道，称 11 月 5 日晚披露）",
+          "official": false
+        },
+        {
+          "url": "https://www.sohu.com/a/1099205338_122980439",
+          "checked": "2026-11-10",
+          "label": "搜狐（称 11 月 8 日官方发文，日期说法不一）",
+          "official": false
+        }
+      ],
       "directions": [
         "agent"
       ]
@@ -8372,7 +8377,6 @@ window.DATA = {
           "src": {
             "url": "https://finance.sina.com.cn/tech/digi/2026-11-08/doc-inixzpas7009595.shtml",
             "checked": "2026-11-09",
-            "official": false,
             "label": "新浪科技（IT之家）"
           }
         },
@@ -8383,7 +8387,6 @@ window.DATA = {
           "src": {
             "url": "https://www.thehindubusinessline.com/info-tech/anthropic-strikes-34-billion-deal-for-data-centre-generators/article71680927.ece",
             "checked": "2026-11-09",
-            "official": false,
             "label": "BusinessLine（路透转述 FT）"
           }
         },
@@ -8508,10 +8511,9 @@ window.DATA = {
           "type": "新动态",
           "text": "11 月 9 日：千问办公 2.0 发布，推出多人与 Agent 协作、自动任务、人机共创",
           "src": {
-            "url": "https://finance.sina.com.cn/tech/digi/2026-11-09/doc-iniycrzy3255750.shtml",
+            "url": "https://docs.qwenwork.cn/release-notes/desktop",
             "checked": "2026-11-10",
-            "label": "新浪科技（IT之家）",
-            "official": false
+            "label": "千问办公官方更新日志"
           }
         },
         {
@@ -8519,10 +8521,9 @@ window.DATA = {
           "type": "产品变化",
           "text": "能力地图：办公智能体赛道新增「千问办公」（和已收录的千问工作助理是两款产品）",
           "src": {
-            "url": "https://finance.sina.com.cn/tech/digi/2026-11-09/doc-iniycrzy3255750.shtml",
+            "url": "https://docs.qwenwork.cn/release-notes/desktop",
             "checked": "2026-11-10",
-            "label": "新浪科技（IT之家）",
-            "official": false
+            "label": "千问办公官方更新日志"
           }
         },
         {
@@ -8565,6 +8566,33 @@ window.DATA = {
             "checked": "2026-11-10",
             "label": "Meta 研究博客"
           }
+        }
+      ]
+    },
+    {
+      "date": "2026-11-10",
+      "by": "手动修正来源",
+      "items": [
+        {
+          "company": "qwen",
+          "type": "其他",
+          "text": "千问办公 2.0 改用官方更新日志作为来源",
+          "src": {
+            "url": "https://docs.qwenwork.cn/release-notes/desktop",
+            "checked": "2026-11-10",
+            "label": "千问办公官方更新日志"
+          }
+        },
+        {
+          "company": "deepseek",
+          "type": "其他",
+          "text": "DeepSeek Harness 插件市场一条：日期改为 11 月 5 日（媒体说法不一，附两个来源）；官网报错、官方 X 需登录，暂无可打开的官方原文",
+          "src": null
+        },
+        {
+          "type": "其他",
+          "text": "新浪科技（IT之家）、BusinessLine 等主流媒体不再标「非官方来源」",
+          "src": null
         }
       ]
     }
@@ -12902,10 +12930,9 @@ window.DATA = {
       },
       "src": [
         {
-          "url": "https://finance.sina.com.cn/tech/digi/2026-11-09/doc-iniycrzy3255750.shtml",
+          "url": "https://docs.qwenwork.cn/release-notes/desktop",
           "checked": "2026-11-10",
-          "label": "新浪科技（IT之家）",
-          "official": false
+          "label": "千问办公官方更新日志"
         }
       ],
       "matrix": {
