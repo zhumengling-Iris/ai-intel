@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 行业情报库</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#/">AI 行业情报库</a>
+      <nav class="nav">
+        <a href="#/" data-nav="list">公司列表</a>
+        <a href="#/timeline" data-nav="timeline">动态时间线</a>
+        <a href="#/terms" data-nav="terms">新词雷达</a>
+        <a href="#/map" data-nav="map">能力地图</a>
+        <a href="#/compare" data-nav="compare">对比</a>
+        <a href="#/sources" data-nav="sources">来源核查</a>
+        <a href="#/updates" data-nav="updates">更新记录</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app" class="container"></main>
+
+  <footer class="footer"><span id="version"></span> · 数据更新于 <span id="updated"></span></footer>
+
+  <div id="compare-bar" class="compare-bar" hidden></div>
+
+  <!-- 数据和页面分开：更新数据只改 data.js；旧数据备份在 backup/ -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

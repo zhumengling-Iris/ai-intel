@@ -99,8 +99,44 @@ for (const x of D.products || []) {
 }
 for (const x of D.tracks || []) if (!(D.products || []).some((p) => (p.tracks || []).includes(x.id))) errs.push(`赛道没有产品：${x.id}`);
 
+// V3.3：没有官方原文的条目必须写明原因（PRD 6.10）。数据里登记了 officialDomains 才启用
+if (Array.isArray(D.officialDomains)) {
+  const REASONS = ['暂未找到', '官网打不开', '需要登录', '只发在公众号', '官方确实没发'];
+  const isOfficialUrl = (url) => {
+    let u;
+    try { u = new URL(url); } catch (e) { return false; }
+    const hostPath = (u.hostname + u.pathname).toLowerCase();
+    return D.officialDomains.some((d) => {
+      d = d.toLowerCase();
+      if (d.includes('/')) return hostPath.startsWith(d) || hostPath.startsWith('www.' + d);
+      return u.hostname === d || u.hostname.endsWith('.' + d);
+    });
+  };
+  const toList = (s) => (Array.isArray(s) ? s : s ? [s] : []);
+  const checkGap = (label, obj, src) => {
+    const list = toList(src);
+    const hasOfficial = list.some((s) => s && s.url && s.official !== false && isOfficialUrl(s.url));
+    const g = obj.officialGap;
+    if (hasOfficial && g) errs.push(`${label}：已有官方来源，请删除 officialGap`);
+    if (!hasOfficial) {
+      if (!g) { errs.push(`${label}：没有官方原文，要填写 officialGap（原因、说明、查过的渠道、日期）`); return; }
+      if (!REASONS.includes(g.reason)) errs.push(`${label}：officialGap 原因不对：${g.reason}`);
+      if (!g.detail) errs.push(`${label}：officialGap 缺少说明`);
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(g.checked || '')) errs.push(`${label}：officialGap 查询日期要写 YYYY-MM-DD`);
+      if (g.reason !== '暂未找到' && !(g.tried || []).length) errs.push(`${label}：officialGap 要写查过的渠道`);
+    }
+  };
+  for (const n of D.news) checkGap(`动态「${n.title}」`, n, n.src);
+  for (const x of D.products || []) checkGap(`产品「${x.name}」`, x, x.src);
+  for (const x of D.terms || []) checkGap(`词条「${x.name}」`, x, x.src);
+  for (const c of D.companies) for (const m of c.models || []) {
+    if (m.src) checkGap(`模型「${m.name}」`, m, m.src);
+    for (const [k, b] of Object.entries(m.detail || {})) if (b && b.src) checkGap(`模型「${m.name}」的 ${k}`, b, b.src);
+  }
+}
+
 if (errs.length) {
   console.error(`发现 ${errs.length} 个问题：\n- ${errs.join('\n- ')}`);
   process.exit(1);
 }
-console.log(`检查通过：${D.companies.length} 家公司，${D.news.length} 条动态，${D.companies.reduce((s, c) => s + c.models.length, 0)} 个模型，${(D.terms || []).length} 个新词，${(D.products || []).length} 个产品，数据更新于 ${D.updated}`);
+console.log(`检查通过：${D.companies.length} 家公司，${D.news.length} 条动态，${D.companies.reduce((s, c) => s + c.models.length, 0)} 个模型，${(D.terms || []).length} 个新词，${(D.products || []).length} 个产品，${(D.officialDomains ? '已启用来源核查，' : '')}数据更新于 ${D.updated}`);
