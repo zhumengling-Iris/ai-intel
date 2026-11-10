@@ -196,7 +196,10 @@ h1 { font-size: 24px; margin: 0 0 4px; line-height: 1.3; }
 .news-item .co { font-weight: 600; white-space: nowrap; }
 .news-item .title { min-width: 0; overflow-wrap: anywhere; }
 .timeline .news-item { grid-template-columns: 96px 110px 1fr auto; }
-.news-item .src-cell { display: flex; gap: 10px; flex-wrap: wrap; }
+.news-item .src-cell { display: flex; gap: 4px 10px; flex-wrap: wrap; max-width: 360px; }
+/* 来源说明很长时在来源栏里换行，不把标题挤成一字一行 */
+.news-item .src-cell .src { white-space: normal; }
+@media (max-width: 640px) { .news-item .src-cell { max-width: none; } }
 .timeline-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 4px 18px; box-shadow: var(--shadow); }
 .result-count { color: var(--muted); font-size: 14px; margin-left: auto; }
 
