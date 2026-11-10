@@ -33,7 +33,7 @@
  *   - terms[].category：词条分类，目前有「架构模式」「开发框架」「开发框架」
  */
 window.DATA = {
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "companies": [
     {
       "id": "anthropic",
@@ -71,6 +71,152 @@ window.DATA = {
       "models": [
         {
           "current": true,
+          "collected": "2026-11-10",
+          "id": "claude-fable-5-2",
+          "name": "Claude Fable 5.2",
+          "date": "2026-11-09",
+          "summary": "官方称最强模型，面向最艰巨的技术工作",
+          "src": {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+            "checked": "2026-11-10",
+            "label": "发布页"
+          },
+          "detail": {
+            "basic": {
+              "发布日期": "2026-11-09",
+              "开发方": "Anthropic",
+              "是否开源": "否，通过 Claude 应用和 API 提供",
+              "许可证": "不适用（闭源，按服务条款使用）",
+              "src": [
+                {
+                  "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+                  "checked": "2026-11-10",
+                  "label": "发布页"
+                },
+                {
+                  "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+                  "checked": "2026-11-10",
+                  "label": "模型文档"
+                }
+              ]
+            },
+            "spec": {
+              "参数规模": "官方未公开",
+              "架构": "官方未公开（与 Mythos 5.2 是同一底层模型）",
+              "上下文窗口": "100 万 token",
+              "最大输出长度": "12.8 万 token",
+              "src": [
+                {
+                  "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+                  "checked": "2026-11-10",
+                  "label": "模型文档"
+                },
+                {
+                  "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+                  "checked": "2026-11-10",
+                  "label": "发布页"
+                }
+              ]
+            },
+            "ability": {
+              "输入模态": "文本、图像",
+              "输出模态": "文本",
+              "推理模式": "自适应思考（始终开启），默认推理强度 high",
+              "工具调用": "支持",
+              "src": {
+                "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+                "checked": "2026-11-10",
+                "label": "模型文档"
+              }
+            },
+            "price": {
+              "输入价格": "8 美元 / 百万 token（快速模式 16 美元）",
+              "输出价格": "40 美元 / 百万 token（快速模式 80 美元）",
+              "缓存价格": "读取 0.20 美元；写入 10 美元（5 分钟）/ 16 美元（1 小时）/ 百万 token",
+              "src": [
+                {
+                  "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+                  "checked": "2026-11-10",
+                  "label": "价格文档"
+                },
+                {
+                  "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+                  "checked": "2026-11-10",
+                  "label": "发布页"
+                }
+              ]
+            },
+            "channels": {
+              "渠道": "Claude 应用、Claude Code、Claude Platform API（claude-fable-5-2）、Amazon Web Services、Google Cloud、Microsoft Azure；Mythos 5.2 只向网络安全、生命科学验证计划的机构开放",
+              "src": {
+                "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+                "checked": "2026-11-10",
+                "label": "发布页"
+              }
+            },
+            "bench": {
+              "items": [
+                [
+                  "FrontierCode 2.0（智能体编程，Xhigh）",
+                  "49.1%"
+                ],
+                [
+                  "FrontierSWE v2（智能体编程）",
+                  "69.9%"
+                ],
+                [
+                  "AutomationBench（业务流程）",
+                  "51.4%"
+                ],
+                [
+                  "Terminal-Bench-Science 0.1（科研）",
+                  "74.6%"
+                ],
+                [
+                  "OSWorld 2.1（电脑操作，离线部分题集）",
+                  "89.3%"
+                ],
+                [
+                  "Humanity’s Last Exam（使用工具）",
+                  "74.2%"
+                ],
+                [
+                  "Remote Labor Index（知识工作，High）",
+                  "41.3%"
+                ],
+                [
+                  "AA-Briefcase v1.1（知识工作）",
+                  "66.1%（Elo 1785）"
+                ],
+                [
+                  "RoboDojo Sim（机器人控制）",
+                  "64.9%"
+                ]
+              ],
+              "note": "开启防护时的成绩，默认取各模型最高可用推理强度；同表 Opus 5.5 的 AA-Briefcase Elo 为 1800。官方仍推荐多数任务先用 Opus 5.5",
+              "src": {
+                "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+                "checked": "2026-11-10",
+                "label": "发布页"
+              }
+            }
+          }
+        },
+        {
+          "current": false,
+          "collected": null,
+          "id": "claude-mythos-5-2",
+          "name": "Claude Mythos 5.2",
+          "date": "2026-11-09",
+          "summary": "与 Fable 5.2 同一模型，限网安和生命科学机构使用",
+          "src": {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+            "checked": "2026-11-10",
+            "label": "发布页"
+          }
+        },
+        {
+          "current": false,
           "collected": "2026-10-20",
           "id": "claude-opus-5-5",
           "name": "Claude Opus 5.5",
@@ -438,6 +584,12 @@ window.DATA = {
         },
         "api": [
           {
+            "model": "Claude Fable 5.2",
+            "input": "8 美元",
+            "output": "40 美元",
+            "cache": "读取 0.20 美元"
+          },
+          {
             "model": "Claude Fable 5.1",
             "input": "10 美元",
             "output": "50 美元",
@@ -478,6 +630,11 @@ window.DATA = {
             "url": "https://platform.claude.com/docs/en/about-claude/pricing",
             "checked": "2026-11-09",
             "label": "Claude 价格文档"
+          },
+          {
+            "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+            "checked": "2026-11-10",
+            "label": "Claude 价格文档（Fable 5.2）"
           }
         ]
       },
@@ -2332,26 +2489,27 @@ window.DATA = {
           {
             "name": "免费",
             "monthly": "0",
-            "annual": null,
+            "annual": "0",
             "perks": "15 GB 存储，基础 Gemini 用量"
           },
           {
             "name": "Google AI Plus（2 TB）",
             "monthly": "9.99 美元",
-            "annual": null,
+            "annual": "约 8.33 美元（99.99 美元 / 年）",
             "perks": "Gemini 用量 2 倍、Flash 模型、Flow、Gmail 中的 Gemini"
           },
           {
             "name": "Google AI Pro（5 TB）",
             "monthly": "19.99 美元",
-            "annual": null,
+            "annual": "约 16.67 美元（199.99 美元 / 年）",
             "perks": "Gemini 用量 4 倍、Gemini 4 Argon、深度研究、Flow、Gmail / 文档中的 Gemini"
           }
         ],
         "plansNote": "按年付最多省 16%",
         "plansSrc": {
           "url": "https://one.google.com/about/plans",
-          "checked": "2026-10-20"
+          "checked": "2026-11-10",
+          "label": "Google One 方案页"
         },
         "api": [
           {
@@ -2459,7 +2617,13 @@ window.DATA = {
           }
         },
         "memory": {
-          "v": "未查到"
+          "v": "有",
+          "note": "Gemini 应用可记住过往对话做个性化回答，用户可查看和管理记忆",
+          "src": {
+            "url": "https://support.google.com/gemini/answer/15637730?hl=en",
+            "checked": "2026-11-10",
+            "label": "Gemini 帮助中心"
+          }
         },
         "openWeights": {
           "v": "部分",
@@ -2479,7 +2643,13 @@ window.DATA = {
           }
         },
         "enterprise": {
-          "v": "未查到"
+          "v": "有",
+          "note": "Gemini for Business（Gemini Enterprise），可免费试用 Enterprise Plus 版 30 天",
+          "src": {
+            "url": "https://cloud.google.com/gemini-enterprise",
+            "checked": "2026-11-10",
+            "label": "Google Cloud"
+          }
         }
       }
     },
@@ -2800,7 +2970,13 @@ window.DATA = {
           "v": "未查到"
         },
         "image": {
-          "v": "未查到"
+          "v": "有",
+          "note": "Muse Image：Meta AI 应用、meta.ai、美国 Instagram 快拍、部分国家的 WhatsApp",
+          "src": {
+            "url": "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/",
+            "checked": "2026-11-10",
+            "label": "Meta 研究博客"
+          }
         },
         "video": {
           "v": "未查到"
@@ -6966,6 +7142,80 @@ window.DATA = {
         "official": false,
         "label": "BusinessLine（路透转述 FT）"
       }
+    },
+    {
+      "company": "anthropic",
+      "date": "2026-11-09",
+      "type": "模型发布",
+      "title": "发布 Fable 5.2 和 Mythos 5.2，降价提速",
+      "src": {
+        "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+        "checked": "2026-11-10",
+        "label": "发布页"
+      },
+      "directions": [
+        "cost",
+        "safety"
+      ]
+    },
+    {
+      "company": "openai",
+      "subject": "AWS Marketplace",
+      "date": "2026-11-09",
+      "type": "合作",
+      "title": "ChatGPT 企业版上架 AWS 市场",
+      "src": {
+        "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+        "checked": "2026-11-10",
+        "label": "OpenAI"
+      }
+    },
+    {
+      "company": "doubao",
+      "subject": "Seedream",
+      "date": "2026-11-09",
+      "type": "模型发布",
+      "title": "发布图像模型 Seedream 5.5，多轮编辑更稳",
+      "src": {
+        "url": "https://seed.bytedance.com/zh/seedream5_5",
+        "checked": "2026-11-10",
+        "label": "字节跳动 Seed"
+      },
+      "directions": [
+        "cost"
+      ]
+    },
+    {
+      "company": "qwen",
+      "subject": "千问办公",
+      "date": "2026-11-09",
+      "type": "产品",
+      "title": "千问办公 2.0 发布，支持多人与 Agent 协作",
+      "src": {
+        "url": "https://finance.sina.com.cn/tech/digi/2026-11-09/doc-iniycrzy3255750.shtml",
+        "checked": "2026-11-10",
+        "label": "新浪科技（IT之家）",
+        "official": false
+      },
+      "directions": [
+        "agent"
+      ]
+    },
+    {
+      "company": "deepseek",
+      "subject": "DeepSeek Harness",
+      "date": "2026-11-08",
+      "type": "产品",
+      "title": "Harness 筹备插件市场和开发者扶持",
+      "src": {
+        "url": "https://www.sohu.com/a/1099205338_122980439",
+        "checked": "2026-11-10",
+        "label": "搜狐",
+        "official": false
+      },
+      "directions": [
+        "agent"
+      ]
     }
   ],
   "version": "V3.1",
@@ -8185,6 +8435,135 @@ window.DATA = {
             "url": "https://help.openai.com/en/articles/20001152-what-to-know-about-the-sora-discontinuation",
             "checked": "2026-11-09",
             "label": "OpenAI 帮助中心"
+          }
+        }
+      ]
+    },
+    {
+      "date": "2026-11-10",
+      "by": "每日自动更新",
+      "items": [
+        {
+          "company": "anthropic",
+          "type": "新模型",
+          "text": "11 月 9 日：发布 Claude Fable 5.2 和 Mythos 5.2（同一底层模型），官方称最强；价格 8 / 40 美元，比 Fable 5.1 低，输出最多快 30%",
+          "src": {
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+            "checked": "2026-11-10",
+            "label": "发布页"
+          }
+        },
+        {
+          "company": "anthropic",
+          "type": "其他",
+          "text": "当前主力由 Opus 5.5 改为 Fable 5.2（官方称「最强模型」）；Opus 5.5 的详细参数保留存档。官方仍推荐多数任务先用 Opus 5.5",
+          "src": {
+            "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+            "checked": "2026-11-10",
+            "label": "模型文档"
+          }
+        },
+        {
+          "company": "anthropic",
+          "type": "价格变化",
+          "text": "API 价格新增 Fable 5.2：输入 8 美元、输出 40 美元、缓存读取 0.20 美元 / 百万 token；快速模式 16 / 80 美元",
+          "src": {
+            "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+            "checked": "2026-11-10",
+            "label": "Claude 价格文档"
+          }
+        },
+        {
+          "company": "openai",
+          "type": "新动态",
+          "text": "11 月 9 日：ChatGPT Enterprise 上架 AWS Marketplace，企业可走 AWS 采购和账单",
+          "src": {
+            "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+            "checked": "2026-11-10",
+            "label": "OpenAI"
+          }
+        },
+        {
+          "company": "doubao",
+          "type": "新动态",
+          "text": "11 月 9 日：发布图像模型 Seedream 5.5，已上线豆包、豆包工作、即梦，API 即将上线火山方舟",
+          "src": {
+            "url": "https://www.163.com/tech/article/LBAFFIOE00098IEO.html",
+            "checked": "2026-11-10",
+            "label": "网易科技"
+          }
+        },
+        {
+          "company": "doubao",
+          "type": "产品变化",
+          "text": "能力地图：Seedream 更新到 5.5，图像编辑、使用入口随之更新",
+          "src": {
+            "url": "https://seed.bytedance.com/zh/seedream5_5",
+            "checked": "2026-11-10",
+            "label": "字节跳动 Seed"
+          }
+        },
+        {
+          "company": "qwen",
+          "type": "新动态",
+          "text": "11 月 9 日：千问办公 2.0 发布，推出多人与 Agent 协作、自动任务、人机共创",
+          "src": {
+            "url": "https://finance.sina.com.cn/tech/digi/2026-11-09/doc-iniycrzy3255750.shtml",
+            "checked": "2026-11-10",
+            "label": "新浪科技（IT之家）",
+            "official": false
+          }
+        },
+        {
+          "company": "qwen",
+          "type": "产品变化",
+          "text": "能力地图：办公智能体赛道新增「千问办公」（和已收录的千问工作助理是两款产品）",
+          "src": {
+            "url": "https://finance.sina.com.cn/tech/digi/2026-11-09/doc-iniycrzy3255750.shtml",
+            "checked": "2026-11-10",
+            "label": "新浪科技（IT之家）",
+            "official": false
+          }
+        },
+        {
+          "company": "deepseek",
+          "type": "新动态",
+          "text": "11 月 8 日：DeepSeek Harness 公布插件生态进展（约 3.5 万个社区插件），筹备官方插件市场和开发者扶持计划（补录）",
+          "src": {
+            "url": "https://www.sohu.com/a/1099205338_122980439",
+            "checked": "2026-11-10",
+            "label": "搜狐",
+            "official": false
+          }
+        },
+        {
+          "company": "google-deepmind",
+          "type": "价格变化",
+          "text": "周二补查：填上 Google AI Plus、AI Pro 的年付价格（99.99 美元 / 年、199.99 美元 / 年）",
+          "src": {
+            "url": "https://one.google.com/about/plans",
+            "checked": "2026-11-10",
+            "label": "Google One 方案页"
+          }
+        },
+        {
+          "company": "google-deepmind",
+          "type": "功能变化",
+          "text": "周二补查：记忆填为「有」（记住过往对话），企业版填为「有」（Gemini for Business）",
+          "src": {
+            "url": "https://cloud.google.com/gemini-enterprise",
+            "checked": "2026-11-10",
+            "label": "Google Cloud"
+          }
+        },
+        {
+          "company": "meta",
+          "type": "功能变化",
+          "text": "周二补查：图像生成填为「有」（Muse Image）",
+          "src": {
+            "url": "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/",
+            "checked": "2026-11-10",
+            "label": "Meta 研究博客"
           }
         }
       ]
@@ -11738,9 +12117,9 @@ window.DATA = {
         "image-gen"
       ],
       "desc": "字节豆包的图像创作模型，主打可控编辑",
-      "version": "Seedream 5.0 Pro",
-      "versionDate": null,
-      "model": "Seedream",
+      "version": "Seedream 5.5",
+      "versionDate": "2026-11-09",
+      "model": "Seedream 5.5",
       "newsMatch": "Seedream",
       "labels": {
         "layer": "模型 + 应用",
@@ -11749,6 +12128,16 @@ window.DATA = {
         "users": "普通用户、开发者"
       },
       "src": [
+        {
+          "url": "https://seed.bytedance.com/zh/seedream5_5",
+          "checked": "2026-11-10",
+          "label": "字节跳动 Seed"
+        },
+        {
+          "url": "https://www.163.com/tech/article/LBAFFIOE00098IEO.html",
+          "checked": "2026-11-10",
+          "label": "网易科技"
+        },
         {
           "url": "https://www.volcengine.com/docs/82379/1330310",
           "checked": "2026-11-06",
@@ -11764,12 +12153,19 @@ window.DATA = {
       "matrix": {
         "image-gen": {
           "最高清晰度": null,
-          "图像编辑": "支持，官方主打编辑更可控",
+          "图像编辑": "多轮编辑时非编辑区域像素级保持；原生生成透明素材",
           "多图参考": null,
           "开放权重": null,
-          "使用入口": "火山方舟 API"
+          "使用入口": "豆包、豆包工作、即梦；5.5 的 API 即将上线火山方舟"
         }
-      }
+      },
+      "history": [
+        {
+          "date": "2026-11-09",
+          "name": "Seedream 5.5",
+          "note": "生成更快，多轮编辑更稳，支持透明素材；据网易科技，2K 方图编辑约 0.28 元 / 张"
+        }
+      ]
     },
     {
       "id": "qwen-image",
@@ -12481,6 +12877,52 @@ window.DATA = {
           "使用入口": "即梦 AI"
         }
       }
+    },
+    {
+      "id": "qwen-office",
+      "name": "千问办公",
+      "aliases": [
+        "千问办公 2.0",
+        "Team Agent"
+      ],
+      "company": "qwen",
+      "tracks": [
+        "office-agent"
+      ],
+      "desc": "阿里面向个人和团队协作的办公智能体，可把 Agent 带进钉钉工作群",
+      "version": "千问办公 2.0",
+      "versionDate": "2026-11-09",
+      "model": null,
+      "newsMatch": "千问办公",
+      "labels": {
+        "layer": "模型 + 应用",
+        "core": "AI 原生",
+        "modality": "多模态",
+        "users": "普通用户、企业"
+      },
+      "src": [
+        {
+          "url": "https://finance.sina.com.cn/tech/digi/2026-11-09/doc-iniycrzy3255750.shtml",
+          "checked": "2026-11-10",
+          "label": "新浪科技（IT之家）",
+          "official": false
+        }
+      ],
+      "matrix": {
+        "office-agent": {
+          "主要能力": "多人与 Agent 协作、按事件自动触发任务、在对话里直接修改文档和表格",
+          "工作位置": "钉钉群聊、文档、AI 表格、AI 听记、宜搭应用",
+          "使用形态": "千问办公客户端，三端互联",
+          "价格入口": null
+        }
+      },
+      "history": [
+        {
+          "date": "2026-11-09",
+          "name": "千问办公 2.0",
+          "note": "新增协作、自动任务、人机共创、资料空间"
+        }
+      ]
     }
   ]
 };
