@@ -38,7 +38,7 @@
  *   - officialDomains：官方域名清单；带 / 的按网址前缀匹配（如 huggingface.co/qwen）
  */
 window.DATA = {
-  "updated": "2026-11-10",
+  "updated": "2026-11-11",
   "companies": [
     {
       "id": "anthropic",
@@ -348,17 +348,18 @@ window.DATA = {
           "name": "Claude Haiku 5.5",
           "date": "2026-10-07",
           "summary": "5.5 系列最快的模型，适合大批量任务",
-          "src": {
-            "url": "https://en.wikipedia.org/wiki/Claude_(AI)",
-            "checked": "2026-10-20",
-            "official": false
-          },
-          "officialGap": {
-            "reason": "暂未找到",
-            "detail": "历代模型目前引用维基百科，还没逐个查找官方发布文章",
-            "tried": [],
-            "checked": "2026-11-10"
-          }
+          "src": [
+            {
+              "url": "https://www.anthropic.com/claude-haiku-5-5",
+              "checked": "2026-11-11",
+              "label": "官方发布页"
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/Claude_(AI)",
+              "checked": "2026-10-20",
+              "official": false
+            }
+          ]
         },
         {
           "current": false,
@@ -367,17 +368,18 @@ window.DATA = {
           "name": "Claude Sonnet 5.5",
           "date": "2026-09-28",
           "summary": "速度和智能的平衡",
-          "src": {
-            "url": "https://en.wikipedia.org/wiki/Claude_(AI)",
-            "checked": "2026-10-20",
-            "official": false
-          },
-          "officialGap": {
-            "reason": "暂未找到",
-            "detail": "历代模型目前引用维基百科，还没逐个查找官方发布文章",
-            "tried": [],
-            "checked": "2026-11-10"
-          }
+          "src": [
+            {
+              "url": "https://www.anthropic.com/claude-sonnet-5-5",
+              "checked": "2026-11-11",
+              "label": "官方发布页"
+            },
+            {
+              "url": "https://en.wikipedia.org/wiki/Claude_(AI)",
+              "checked": "2026-10-20",
+              "official": false
+            }
+          ]
         },
         {
           "current": false,
@@ -394,8 +396,10 @@ window.DATA = {
           "officialGap": {
             "reason": "暂未找到",
             "detail": "历代模型目前引用维基百科，还没逐个查找官方发布文章",
-            "tried": [],
-            "checked": "2026-11-10"
+            "tried": [
+              "https://www.anthropic.com/news/claude-fable-5-1（404）"
+            ],
+            "checked": "2026-11-11"
           }
         },
         {
@@ -1236,6 +1240,19 @@ window.DATA = {
       },
       "models": [
         {
+          "current": false,
+          "collected": null,
+          "id": "qwen4-max-preview",
+          "name": "Qwen4-Max-Preview",
+          "date": "2026-11-11",
+          "summary": "新一代旗舰多模态模型预览版，11 月 25 日下线",
+          "src": {
+            "url": "https://help.aliyun.com/zh/model-studio/qwen4-max-preview",
+            "checked": "2026-11-11",
+            "label": "百炼模型文档"
+          }
+        },
+        {
           "current": true,
           "collected": "2026-10-20",
           "id": "qwen3-8-max",
@@ -1376,8 +1393,10 @@ window.DATA = {
           "officialGap": {
             "reason": "暂未找到",
             "detail": "历代模型目前引用维基百科，还没逐个查找官方发布文章",
-            "tried": [],
-            "checked": "2026-11-10"
+            "tried": [
+              "Hugging Face Qwen 组织搜索 Qwen3.8-Omni"
+            ],
+            "checked": "2026-11-11"
           }
         },
         {
@@ -3451,25 +3470,39 @@ window.DATA = {
               ]
             },
             "ability": {
-              "输入模态": null,
+              "输入模态": "文本、图像",
               "输出模态": "文本",
               "推理模式": "可配置推理强度；知识截止 2026 年 5 月",
               "工具调用": "支持智能体工具调用",
-              "src": {
-                "url": "https://docs.x.ai/docs/models",
-                "checked": "2026-10-20",
-                "label": "模型文档"
-              }
+              "src": [
+                {
+                  "url": "https://docs.x.ai/docs/models",
+                  "checked": "2026-10-20",
+                  "label": "模型文档"
+                },
+                {
+                  "url": "https://docs.x.ai/docs/models/grok-4.7",
+                  "checked": "2026-11-11",
+                  "label": "Grok 4.7 模型文档"
+                }
+              ]
             },
             "price": {
               "输入价格": "2 美元 / 百万 token",
               "输出价格": "6 美元 / 百万 token",
-              "缓存价格": null,
-              "src": {
-                "url": "https://docs.x.ai/docs/models",
-                "checked": "2026-10-20",
-                "label": "模型文档"
-              }
+              "缓存价格": "0.50 美元 / 百万 token",
+              "src": [
+                {
+                  "url": "https://docs.x.ai/docs/models",
+                  "checked": "2026-10-20",
+                  "label": "模型文档"
+                },
+                {
+                  "url": "https://docs.x.ai/docs/models/grok-4.7",
+                  "checked": "2026-11-11",
+                  "label": "Grok 4.7 模型文档"
+                }
+              ]
             },
             "channels": {
               "渠道": "Grok 应用、X、Cursor、xAI API",
@@ -3730,7 +3763,7 @@ window.DATA = {
             "model": "Grok 4.7",
             "input": "2 美元",
             "output": "6 美元",
-            "cache": null
+            "cache": "0.50 美元"
           }
         ],
         "apiUnit": "单位：每百万 token；另有语音 API（0.08 美元 / 分钟起）和图像视频 API（0.02 美元 / 张起）",
@@ -4243,7 +4276,13 @@ window.DATA = {
           }
         },
         "research": {
-          "v": "未查到"
+          "v": "有",
+          "note": "Le Chat Pro 提供更多深度研究报告",
+          "src": {
+            "url": "https://mistral.ai/pricing",
+            "checked": "2026-11-11",
+            "label": "Mistral 价格页"
+          }
         },
         "image": {
           "v": "有",
@@ -5508,6 +5547,19 @@ window.DATA = {
                 "label": "发布页"
               }
             }
+          }
+        },
+        {
+          "current": false,
+          "collected": null,
+          "id": "minimax-h3-image",
+          "name": "MiniMax H3-Image",
+          "date": "2026-11-11",
+          "summary": "开放权重图像生成和编辑模型，10 秒内出 4K 图",
+          "src": {
+            "url": "https://www.minimax.io/blog/minimax-h3-image",
+            "checked": "2026-11-11",
+            "label": "官方博客"
           }
         },
         {
@@ -7074,12 +7126,13 @@ window.DATA = {
       },
       "officialGap": {
         "reason": "暂未找到",
-        "detail": "code.minimax.cn 有 M3.1 Flash 页面提到预览版，但还不能确认这个网站属于 MiniMax；MiniMax 官网新闻页没找到预览版公告",
+        "detail": "官方正式版博客只说匿名测试的 Space Bunny 是早期版本，没写预览版上线日期；code.minimax.cn 还不能确认属于 MiniMax",
         "tried": [
           "https://www.minimaxi.com/news",
-          "https://code.minimax.cn/tools/m3.1-flash"
+          "https://code.minimax.cn/tools/m3.1-flash",
+          "https://www.minimax.io/blog/minimax-m31f"
         ],
-        "checked": "2026-11-10"
+        "checked": "2026-11-11"
       }
     },
     {
@@ -8011,6 +8064,141 @@ window.DATA = {
         ],
         "checked": "2026-11-10"
       }
+    },
+    {
+      "company": "openai",
+      "date": "2026-11-10",
+      "type": "产品",
+      "title": "ChatGPT 推出商家主页和商家智能体测试版",
+      "src": {
+        "url": "https://openai.com/index/introducing-businesses-chatgpt",
+        "checked": "2026-11-11",
+        "label": "官方公告"
+      },
+      "directions": [
+        "agent",
+        "cost"
+      ]
+    },
+    {
+      "company": "openai",
+      "date": "2026-11-10",
+      "type": "收购与整合",
+      "subject": "Odessia",
+      "title": "收购 AI 旅行智能体 Odessia，创始人加入",
+      "src": {
+        "url": "https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/",
+        "checked": "2026-11-11",
+        "label": "TechCrunch"
+      },
+      "directions": [
+        "agent"
+      ],
+      "officialGap": {
+        "reason": "官方确实没发",
+        "detail": "OpenAI 没有发公告，只由发言人向 TechCrunch 确认；创始人在 LinkedIn 发文（需登录）",
+        "tried": [
+          "https://openai.com/news/rss.xml"
+        ],
+        "checked": "2026-11-11"
+      }
+    },
+    {
+      "company": "openai",
+      "subject": "台积电",
+      "date": "2026-11-10",
+      "type": "融资",
+      "title": "台积电董事会批准投资不超过 5 亿美元",
+      "src": {
+        "url": "https://pr.tsmc.com/english/news/3352",
+        "checked": "2026-11-11",
+        "label": "台积电董事会决议"
+      },
+      "directions": [
+        "cost"
+      ]
+    },
+    {
+      "company": "anthropic",
+      "date": "2026-11-10",
+      "type": "融资",
+      "title": "启动 IPO 路演，发行价区间每股 70–78 美元",
+      "src": {
+        "url": "https://www.anthropic.com/news/roadshow-launch",
+        "checked": "2026-11-11",
+        "label": "官方公告"
+      },
+      "directions": [
+        "cost"
+      ]
+    },
+    {
+      "company": "anthropic",
+      "subject": "台积电",
+      "date": "2026-11-10",
+      "type": "融资",
+      "title": "台积电拟按 IPO 价认购不超过 5 亿美元股份",
+      "src": {
+        "url": "https://pr.tsmc.com/english/news/3352",
+        "checked": "2026-11-11",
+        "label": "台积电董事会决议"
+      },
+      "directions": [
+        "cost"
+      ]
+    },
+    {
+      "company": "google-deepmind",
+      "subject": "Adobe",
+      "date": "2026-11-10",
+      "type": "合作",
+      "title": "与 Adobe 扩大合作，Adobe 工具接入 Gemini",
+      "src": {
+        "url": "https://blog.google/company-news/inside-google/company-announcements/adobe-google-partnership-integration/",
+        "checked": "2026-11-11",
+        "label": "Google 博客"
+      }
+    },
+    {
+      "company": "google-deepmind",
+      "subject": "Gemini Intelligence",
+      "date": "2026-11-10",
+      "type": "产品",
+      "title": "安卓 Gemini 支持一句话生成桌面小组件",
+      "src": {
+        "url": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence-november-features-devices/",
+        "checked": "2026-11-11",
+        "label": "Google 博客"
+      },
+      "directions": [
+        "ux",
+        "agent"
+      ]
+    },
+    {
+      "company": "qwen",
+      "date": "2026-11-11",
+      "type": "模型发布",
+      "title": "上线新一代旗舰 Qwen4-Max 预览版，限时两周",
+      "src": {
+        "url": "https://help.aliyun.com/zh/model-studio/qwen4-max-preview",
+        "checked": "2026-11-11",
+        "label": "百炼模型文档"
+      }
+    },
+    {
+      "company": "minimax",
+      "date": "2026-11-11",
+      "type": "模型发布",
+      "title": "开源图像模型 H3-Image，10 秒内出 4K 图",
+      "src": {
+        "url": "https://www.minimax.io/blog/minimax-h3-image",
+        "checked": "2026-11-11",
+        "label": "官方博客"
+      },
+      "directions": [
+        "cost"
+      ]
     }
   ],
   "version": "V3.3",
@@ -9544,6 +9732,172 @@ window.DATA = {
           "company": null,
           "type": "其他",
           "text": "新增「来源核查」：91 个历代模型标为「暂未找到」，每日任务每天补查最多 5 条"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-11",
+      "by": "每日自动更新",
+      "items": [
+        {
+          "company": "openai",
+          "type": "新动态",
+          "text": "ChatGPT 推出商家主页（Business Hub）和商家智能体测试版，商家智能体可作为广告落地页",
+          "src": {
+            "url": "https://openai.com/index/introducing-businesses-chatgpt",
+            "checked": "2026-11-11",
+            "label": "官方公告"
+          }
+        },
+        {
+          "company": "openai",
+          "type": "新动态",
+          "text": "收购 AI 旅行智能体 Odessia（报道，OpenAI 仅向媒体确认）",
+          "src": {
+            "url": "https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/",
+            "checked": "2026-11-11",
+            "label": "TechCrunch"
+          }
+        },
+        {
+          "company": "openai",
+          "type": "新动态",
+          "text": "台积电董事会批准以不超过 5 亿美元认购 OpenAI 优先股",
+          "src": {
+            "url": "https://pr.tsmc.com/english/news/3352",
+            "checked": "2026-11-11",
+            "label": "台积电董事会决议"
+          }
+        },
+        {
+          "company": "anthropic",
+          "type": "新动态",
+          "text": "启动 IPO 路演：发行 8.25 亿股，每股 70–78 美元，拟在纳斯达克上市，代码 ANT",
+          "src": {
+            "url": "https://www.anthropic.com/news/roadshow-launch",
+            "checked": "2026-11-11",
+            "label": "官方公告"
+          }
+        },
+        {
+          "company": "anthropic",
+          "type": "新动态",
+          "text": "台积电董事会批准按 IPO 价以不超过 5 亿美元认购 Anthropic 普通股",
+          "src": {
+            "url": "https://pr.tsmc.com/english/news/3352",
+            "checked": "2026-11-11",
+            "label": "台积电董事会决议"
+          }
+        },
+        {
+          "company": "google-deepmind",
+          "type": "新动态",
+          "text": "Adobe MAX 上宣布扩大合作：Acrobat 等接入 Gemini 和 Gemini Enterprise，与 DeepMind 探索 Photoshop 图像模型",
+          "src": {
+            "url": "https://blog.google/company-news/inside-google/company-announcements/adobe-google-partnership-integration/",
+            "checked": "2026-11-11",
+            "label": "Google 博客"
+          }
+        },
+        {
+          "company": "google-deepmind",
+          "type": "新动态",
+          "text": "Gemini Intelligence 新增 Create My Widget、设备助手，跨应用任务自动化扩展到英国、印度、日本",
+          "src": {
+            "url": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence-november-features-devices/",
+            "checked": "2026-11-11",
+            "label": "Google 博客"
+          }
+        },
+        {
+          "company": "qwen",
+          "type": "新模型",
+          "text": "Qwen4-Max-Preview：官方称新一代旗舰多模态模型，1M 上下文，仅 Token Plan 可用，预览期 11 月 11 日至 25 日，结束后下线；暂不设为主力",
+          "src": {
+            "url": "https://help.aliyun.com/zh/model-studio/qwen4-max-preview",
+            "checked": "2026-11-11",
+            "label": "百炼模型文档"
+          }
+        },
+        {
+          "company": "minimax",
+          "type": "新模型",
+          "text": "MiniMax H3-Image：开放权重图像生成与编辑模型，4K 图 10 秒内生成，最多 16 张参考图，DiT 331 亿参数",
+          "src": {
+            "url": "https://www.minimax.io/blog/minimax-h3-image",
+            "checked": "2026-11-11",
+            "label": "官方博客"
+          }
+        },
+        {
+          "company": "minimax",
+          "type": "产品变化",
+          "text": "能力地图「图像生成」新增 MiniMax H3-Image",
+          "src": {
+            "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image",
+            "checked": "2026-11-11",
+            "label": "官方模型卡"
+          }
+        },
+        {
+          "company": "xai",
+          "type": "其他",
+          "text": "补查 Grok 4.7：输入模态为文本、图像，缓存输入 0.50 美元 / 百万 token；最大输出长度官方文档未列出，仍为未查到",
+          "src": {
+            "url": "https://docs.x.ai/docs/models/grok-4.7",
+            "checked": "2026-11-11",
+            "label": "Grok 4.7 模型文档"
+          }
+        },
+        {
+          "company": "mistral",
+          "type": "功能变化",
+          "text": "补查功能矩阵：深度研究改为「有」（Pro 档含深度研究报告）；视频生成、电脑操作、记忆价格页未提及，仍为未查到",
+          "src": {
+            "url": "https://mistral.ai/pricing",
+            "checked": "2026-11-11",
+            "label": "Mistral 价格页"
+          }
+        },
+        {
+          "company": "anthropic",
+          "type": "其他",
+          "text": "「Claude Haiku 5.5」补充官方来源：官方发布页（页面未写日期，日期沿用原来源）",
+          "src": {
+            "url": "https://www.anthropic.com/claude-haiku-5-5",
+            "checked": "2026-11-11",
+            "label": "官方发布页"
+          }
+        },
+        {
+          "company": "anthropic",
+          "type": "其他",
+          "text": "「Claude Sonnet 5.5」补充官方来源：官方发布页（页面未写日期，日期沿用原来源）",
+          "src": {
+            "url": "https://www.anthropic.com/claude-sonnet-5-5",
+            "checked": "2026-11-11",
+            "label": "官方发布页"
+          }
+        },
+        {
+          "company": "anthropic",
+          "type": "其他",
+          "text": "补查 Claude Fable 5.1 官方发布页：/news/claude-fable-5-1 返回 404，仍未找到"
+        },
+        {
+          "company": "qwen",
+          "type": "其他",
+          "text": "补查 Qwen3.8-Omni-Flash：Hugging Face Qwen 组织没有同名模型，仍未找到"
+        },
+        {
+          "company": "minimax",
+          "type": "其他",
+          "text": "补查「M3.1-Flash 预览版上线」：官方正式版博客未写预览日期，仍未找到"
+        },
+        {
+          "company": null,
+          "type": "其他",
+          "text": "台积电新闻稿（pr.tsmc.com）登记为官方来源（相关方官网）"
         }
       ]
     }
@@ -13291,6 +13645,57 @@ window.DATA = {
       }
     },
     {
+      "id": "minimax-h3-image",
+      "name": "MiniMax H3-Image",
+      "aliases": [
+        "海螺图像",
+        "H3 Image"
+      ],
+      "company": "minimax",
+      "tracks": [
+        "image-gen"
+      ],
+      "desc": "MiniMax 基于 H3 的开放权重图像模型，生成和编辑合一",
+      "version": "H3-Image",
+      "versionDate": "2026-11-11",
+      "model": "H3-Image（DiT 331 亿参数）",
+      "newsMatch": "H3-Image",
+      "labels": {
+        "layer": "模型 + 应用",
+        "core": "AI 原生",
+        "modality": "图像",
+        "users": "开发者 + 创作者"
+      },
+      "src": [
+        {
+          "url": "https://www.minimax.io/blog/minimax-h3-image",
+          "checked": "2026-11-11",
+          "label": "官方博客"
+        },
+        {
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image",
+          "checked": "2026-11-11",
+          "label": "官方模型卡"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-11",
+          "name": "H3-Image",
+          "note": "开放权重，4K 图 10 秒内生成"
+        }
+      ],
+      "matrix": {
+        "image-gen": {
+          "最高清晰度": "约 1600 万像素（4096×4096）",
+          "图像编辑": "支持",
+          "多图参考": "最多 16 张",
+          "开放权重": "是（MiniMax-H3-Image 社区许可）",
+          "使用入口": "Hugging Face 权重；MiniMax API、MiniMax Code、海螺 AI"
+        }
+      }
+    },
+    {
       "id": "grok-imagine",
       "name": "Grok Imagine",
       "aliases": [
@@ -14037,6 +14442,7 @@ window.DATA = {
     "huggingface.co/deepseek-ai",
     "huggingface.co/zai-org",
     "huggingface.co/mistralai",
-    "huggingface.co/bytedance-seed"
+    "huggingface.co/bytedance-seed",
+    "pr.tsmc.com"
   ]
 };
